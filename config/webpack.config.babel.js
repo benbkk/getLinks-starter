@@ -72,6 +72,12 @@ export default {
                 ],
             },
             {
+                test: /bootstrap\.native/,
+                use: {
+                    loader: 'bootstrap.native-loader',
+                },
+            },
+            {
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [
                     {

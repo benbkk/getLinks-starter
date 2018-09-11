@@ -1,15 +1,15 @@
-# frontend-starter
-A minimum starter to get on with react projects. Webpack 4 + Glamorous.
+# Project Starter Kit for getLinks Assesment Test
+A minimum starter to get on with react projects. With the seems-to-be-everyone's favorite Bootstrap 4 but no jQuery.
 
 ## Featuring
 - Webpack 4
-- ~~Glamorous / Glamor~~ Emotion CSS
-- PostCSS
+- ~~Glamorous / Glamor~~ ~~Emotion CSS~~ Bootstrap 4 Native. I know, sorry, folks. 
+- ~~PostCSS~~
 
 ## Getting Started
 
 ```
-git clone git@github.com:benbkk/frontend-starter.git && cd frontend-starter
+git clone && cd
 yarn
 ```
 
