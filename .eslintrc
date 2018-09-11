@@ -9,6 +9,7 @@
         "import/no-unresolved": [2, { "commonjs": true }],
         "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
         "react/jsx-indent":["error", 4],
+        "react/prefer-stateless-function":["disabled"],
         "react/jsx-filename-extension": 
         [
             1, 
