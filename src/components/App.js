@@ -1,10 +1,10 @@
 import React from 'react';
-import AppHeader from 'components/AppHeader';
+import Header from 'components/Header';
 import AppMain from 'components/AppMain';
 
 export default () => (
-    <div className="app-wrapper">
-        <AppHeader />
+    <React.Fragment>
+        <Header />
         <AppMain />
-    </div>
+    </React.Fragment>
 );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from 'components/App';
-import 'css/globalStyles';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 render(<App />, document.getElementById('app'));
