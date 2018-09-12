@@ -11,20 +11,21 @@ class Carousel extends Component {
 
         this.state = {
             photos: [],
-        }
+        };
     }
+
     async componentDidMount() {
         const photos = await getUnsplash();
         this.setState({
-            photos
-        })
+            photos,
+        });
 
-        console.log(this.state)
-    
         const myCarousel = new bsn.Carousel('#myCarousel', {});
     }
 
     render() {
+        const { photos } = this.state;
+        console.log(photos);
         return (
             <section
                 id="myCarousel"
@@ -32,17 +33,17 @@ class Carousel extends Component {
                 data-ride="carousel"
                 data-interval="7000"
             >
-                
+
                 <div className="carousel-inner" role="listbox">
-                    <CarouselItem 
+                    <CarouselItem
                         className="carousel-item"
                         title="The First Screen"
                     />
-                    <CarouselItem 
+                    <CarouselItem
                         className="carousel-item"
                         title="2nd Screen"
                     />
-                    <CarouselItem 
+                    <CarouselItem
                         className="carousel-item"
                         title="The First Screen"
                     />
@@ -62,7 +63,7 @@ class Carousel extends Component {
                 />
 
             </section>
-        )
+        );
     }
 }
 
