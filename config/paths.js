@@ -4,7 +4,7 @@ export default {
     appIndexJs: path.resolve('src/index.js'),
     appComponents: path.resolve('src/components'),
     appConfig: path.resolve('config'),
-    appStaticComponent: path.resolve('src/components/static'),
+    appStaticComponent: path.resolve('src/components/Static'),
     appSrc: path.resolve('src'),
     appDist: path.resolve('dist'),
     css: path.resolve('src/css'),

@@ -1,10 +1,9 @@
 import React from 'react';
 import Header from 'components/Header';
-import AppMain from 'components/AppMain';
+import Carousel from 'components/Carousel';
 
 export default () => (
     <React.Fragment>
         <Header />
-        <AppMain />
     </React.Fragment>
 );

@@ -6,9 +6,11 @@
     "extends": "airbnb",
     "rules": {
         "indent":["error", 4],
+        "eslint object-curly-newline":["disabled"],
         "import/no-unresolved": [2, { "commonjs": true }],
         "no-unused-expressions": ["error", { "allowTaggedTemplates": true }],
-        "react/jsx-indent":["error", 4],
+        "react/jsx-indent":["disabled"],
+        "react/jsx-indent-props":["disabled"],
         "react/prefer-stateless-function":["disabled"],
         "react/jsx-filename-extension": 
         [
