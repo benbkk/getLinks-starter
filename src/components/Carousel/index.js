@@ -3,9 +3,24 @@ import bsn from 'bootstrap.native/dist/bootstrap-native-v4';
 import CarouselIndicator from './CarouselIndicator';
 import CarouselItem from './CarouselItem';
 import CarouselControl from './CarouselControl';
+import { getUnsplash } from './api';
 
 class Carousel extends Component {
-    componentDidMount() {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            photos: [],
+        }
+    }
+    async componentDidMount() {
+        const photos = await getUnsplash();
+        this.setState({
+            photos
+        })
+
+        console.log(this.state)
+    
         const myCarousel = new bsn.Carousel('#myCarousel', {});
     }
 
