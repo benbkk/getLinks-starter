@@ -103,7 +103,7 @@ export default {
         new HtmlWebpackPlugin({
             template: `${paths.public}/index.ejs`,
             filename: 'index.html',
-            title: 'Let\'s find You an Article | on TheNewYorkTimes',
+            title: 'Let\'s Get Workin\' | getLinks',
             minify: true,
             favicon: `${paths.public}/favicon.png`,
             prefix: '/',

@@ -4,7 +4,7 @@ import SearchForm from './SearchForm';
 import menuItems from './menuItems';
 
 class NavBarCollapsed extends Component {
-    
+
     render() {
         return (
             <div

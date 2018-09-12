@@ -5,5 +5,6 @@ import Carousel from 'components/Carousel';
 export default () => (
     <React.Fragment>
         <Header />
+        <Carousel />
     </React.Fragment>
 );

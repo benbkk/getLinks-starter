@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import bsn from 'bootstrap.native/dist/bootstrap-native-v4';
-import CarouselIndicator from 'components/CarouselIndicator';
-import CarouselItem from 'components/CarouselItem';
-import CarouselControl from 'components/CarouselControl';
+import CarouselIndicator from './CarouselIndicator';
+import CarouselItem from './CarouselItem';
+import CarouselControl from './CarouselControl';
 
 class Carousel extends Component {
     componentDidMount() {
