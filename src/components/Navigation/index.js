@@ -12,13 +12,14 @@ class Navigation extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-expand-md navbar-light">
+            <div className="container">
                 <NavToggle
                     id="navbarToggler"
                     className="navbar-toggler"
                     target="navbarCollapse"
                     label="Toggle Navigation"
                 />
-                <div className="container">
+                
                     <NavBarCollapsed
                         id="navbarCollapse"
                         {...this.props}
