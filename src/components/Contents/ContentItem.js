@@ -6,6 +6,12 @@ export default (props) => {
 
     const Article = styled('article')`
         margin-bottom: 36px;
+        transform: translateY(0px);
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: translateY(-18px);
+        }
     `;
 
     const P = styled('p')`
@@ -44,6 +50,18 @@ export default (props) => {
         }
     `;
 
+    const Img = styled('img')`
+        border-radius: 16px 16px 0 0;
+        -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(90%);
+        transition: filter 0.2s ease-in-out;
+
+        &:hover {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+        }
+    `
+
     const titleText = content.title
         .split(' ')
         .slice(0, 2)
@@ -53,7 +71,7 @@ export default (props) => {
         <Article className="col-lg-3 col-md-4 col-xs-4">
             <InnerWrapper class="inner-wrapper">
                 <figure className="article-thumbnail">
-                    <img src={content.url} className="img-fluid" />
+                    <Img src={content.url} className="img-fluid" />
                     <ImageCaption>
                         <H3 className="h4">{titleText}</H3>
                         <P>{content.title}</P>
