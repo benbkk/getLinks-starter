@@ -6,10 +6,11 @@ import menuItems from './menuItems';
 class NavBarCollapsed extends Component {
 
     render() {
+        const { id } = this.props;
         return (
             <div
                 className="collapse navbar-collapse"
-                id={this.props.id}
+                id={id}
             >
                 <ul className="navbar-nav mr-auto">
                     {menuItems.map(menuItem => (
@@ -20,10 +21,6 @@ class NavBarCollapsed extends Component {
 
                     ))}
                 </ul>
-                <SearchForm
-                    placeholder="Search"
-                    label="Search"
-                />
             </div>
         );
     }

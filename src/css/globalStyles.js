@@ -1,4 +1,3 @@
-import 'typeface-montserrat';
 import { injectGlobal } from 'emotion';
 import { position } from 'polished';
 
@@ -17,10 +16,6 @@ injectGlobal`
 
     .block {
         display: block;
-    }
-    
-    #myCarousel {
-        height: 400px;
     }
 
     .navbar-brand {
@@ -48,6 +43,4 @@ injectGlobal`
         background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
         border-radius: 50%;
     }
-
-
 `;

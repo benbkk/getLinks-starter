@@ -4,7 +4,7 @@ import bsn from 'bootstrap.native/dist/bootstrap-native-v4';
 
 class NavDropdown extends Component {
     componentDidMount() {
-        const dropdownMenuToggle = new bsn.Dropdown('#dropdownMenuToggle', {});
+        bsn.Dropdown('#dropdownMenuToggle', {});
     }
 
     // Don't know why bootstrap won't prevent default

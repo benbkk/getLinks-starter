@@ -1,16 +1,17 @@
 import React from 'react';
-import NavToggle from './NavToggle';
 import bsn from 'bootstrap.native/dist/bootstrap-native-v4';
+import NavToggle from './NavToggle';
 import NavBarCollapsed from './NavBarCollapsed';
+import SearchForm from './SearchForm';
 
 class Navigation extends React.Component {
     componentDidMount() {
-        const navbarToggler = new bsn.Collapse('#navbarToggler', {});
+        bsn.Collapse('#navbarToggler', {});
     }
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-md navbar-light">
                 <NavToggle
                     id="navbarToggler"
                     className="navbar-toggler"
@@ -21,6 +22,10 @@ class Navigation extends React.Component {
                     <NavBarCollapsed
                         id="navbarCollapse"
                         {...this.props}
+                    />
+                    <SearchForm
+                        placeholder="Search"
+                        label="Search"
                     />
                 </div>
             </nav>
