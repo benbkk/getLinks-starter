@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+import ContentItem from './ContentItem';
 import getContent from './api';
+import styled from 'react-emotion';
+
+const Main = styled('section')`
+    padding: 32px 0;
+`
 
 class ContentGrid extends Component {
     constructor(props) {
@@ -10,7 +16,7 @@ class ContentGrid extends Component {
         }
     }
 
-    async ComponentDidMount() {
+    async componentDidMount() {
         try {
             const response = await getContent();
             if (!response.ok) {
@@ -30,18 +36,19 @@ class ContentGrid extends Component {
         const { contents } = this.state;
         console.log(contents);
         return (
-            <section className="content">
+            <Main className="content">
                 <div className="container">
+                    <div class="row">
                     {contents.map((content, i) => (
-                        <li
+                        <ContentItem
                             key={i}
-                            >
-                                {content}
-                            </li>
-                            
+                            content={content}
+                        />
                     ))}
+                    </div>
+                    
                 </div>
-            </section>
+            </Main>
 
         )
     }
