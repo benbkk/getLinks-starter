@@ -38,7 +38,7 @@ class ContentGrid extends Component {
         return (
             <Main className="content">
                 <div className="container">
-                    <div class="row">
+                    <div className="row">
                     {contents.map((content, i) => (
                         <ContentItem
                             key={i}

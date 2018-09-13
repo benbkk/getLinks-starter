@@ -69,7 +69,7 @@ export default (props) => {
 
     return (
         <Article className="col-lg-3 col-md-4 col-xs-4">
-            <InnerWrapper class="inner-wrapper">
+            <InnerWrapper className="inner-wrapper">
                 <figure className="article-thumbnail">
                     <Img src={content.url} className="img-fluid" />
                     <ImageCaption>
