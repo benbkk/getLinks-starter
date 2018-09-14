@@ -5,7 +5,7 @@ import styled from 'react-emotion';
 const SearchForm = (props) => {
     const { placeholder, label } = props;
     return (
-        <form className="form-inline my-2 my-lg-0">
+        <form className="form-inline">
             <input
                 className="form-control bd-search mr-sm-2"
                 type="search"

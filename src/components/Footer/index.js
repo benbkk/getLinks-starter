@@ -60,12 +60,13 @@ const SiteFooter = (props) => {
                             <ul className="nav d-block">
                                 <li className="nav-item d-block">
                                     <Link className="py-2 d-block" href="/">A Link</Link></li>
+                                    <li className="nav-item d-block">
+                                    <Link className="py-2 d-block" href="/">Even More Link Link</Link></li>
                                 <li className="nav-item d-block">
                                     <Link className="py-2 d-block" href="/">Another Link</Link></li>
                                 <li className="nav-item d-block">
                                     <Link className="py-2 d-block" href="/">Yet Another Link</Link></li>
-                                <li className="nav-item d-block">
-                                    <Link className="py-2 d-block" href="/">Even More Link Link</Link></li>
+                                
                                 <li className="nav-item d-block"><Link className="py-2 d-block" href="/">Is there Any End of This?</Link></li>
                             </ul>
                         </div>

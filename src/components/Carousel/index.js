@@ -9,7 +9,7 @@ import getUnsplash from './api';
 
 const Wrapper = styled('section')`
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
-    min-height: 500px;
+    min-height: calc(100vh - 200px);
 `;
 
 const CarouselItems = styled('ul')`

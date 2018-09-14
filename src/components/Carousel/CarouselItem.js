@@ -11,7 +11,7 @@ const CarouselItem = (props) => {
         background-color: ${photo.color};
         background: url(${photo.urls.full}) center no-repeat;
         background-size: cover;
-        height: 500px;
+        min-height: calc(100vh - 200px);
     `;
 
     const CarouselCaption = styled('figcaption')`
