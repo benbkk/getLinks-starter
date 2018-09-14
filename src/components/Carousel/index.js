@@ -8,9 +8,8 @@ import CarouselControl from './CarouselControl';
 import getUnsplash from './api';
 
 const Wrapper = styled('section')`
-    background: #808080;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #3fada8, #808080);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #3fada8, #808080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(90,92,106,1) 0%, rgba(32,45,58,1) 81.3% );
+    min-height: 500px;
 `;
 
 const CarouselItems = styled('ul')`
@@ -34,12 +33,13 @@ class Carousel extends Component {
                 throw Error(response.statusText);
             }
             const json = await response.json();
-            const photos = json.results;
+            const photos = await json.results;
             this.setState({
                 photos,
             });
+            console.log(this.state.photos);
         } catch (error) {
-            console.error(error);
+            return error;
         }
 
         bsn.Carousel('#myCarousel', {});
