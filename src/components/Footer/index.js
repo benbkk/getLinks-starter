@@ -75,12 +75,12 @@ const SiteFooter = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="row">
-                <div className="container">
-                    <Copyright className="d-block py-4 text-secondary">
-                        &copy; 2018
-                    </Copyright>
+                <div class="row">
+                    <div class="col-12">
+                        <Copyright className="d-block py-4 text-secondary">
+                            &copy; 2018
+                        </Copyright>
+                    </div>
                 </div>
             </div>
         </Footer>

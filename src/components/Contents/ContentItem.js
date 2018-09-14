@@ -6,11 +6,11 @@ export default (props) => {
 
     const Article = styled('article')`
         margin-bottom: 36px;
-        transform: translateY(0px);
+        transform: scale(1), translateY(0px);
         transition: transform 0.2s ease-in-out;
 
         &:hover {
-            transform: translateY(-18px);
+            transform: scale(1.1), translateY(-18px);
         }
     `;
 
@@ -60,7 +60,7 @@ export default (props) => {
             -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
         }
-    `
+    `;
 
     const titleText = content.title
         .split(' ')

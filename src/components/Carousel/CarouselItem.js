@@ -27,6 +27,7 @@ const CarouselItem = (props) => {
             background: rgb(148,187,233);
             background: linear-gradient(146deg, rgba(148,187,233,0) 0%, rgba(123,155,193,0) 45%, rgba(0,0,0,0.861782212885154) 100%);
             z-index: 9;
+            opacity: 0.8;
         }
     `;
 
