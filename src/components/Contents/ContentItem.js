@@ -68,7 +68,7 @@ export default (props) => {
         .join(' ');
 
     return (
-        <Article className="col-lg-3 col-md-4 col-xs-4">
+        <Article className="col-lg-3 col-md-4 col-6">
             <InnerWrapper className="inner-wrapper">
                 <figure className="article-thumbnail">
                     <Img src={content.url} className="img-fluid" />

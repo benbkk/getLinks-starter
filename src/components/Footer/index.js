@@ -36,12 +36,12 @@ const SiteFooter = (props) => {
                             <ul className="list-unstyled">
                                 <li className="media">
                                     <img
-                                        className="mr-3"
+                                        className="mr-3 rounded-circle"
                                         src="https://via.placeholder.com/64x64"
-                                        alt="Generic placeholder image"
+                                        alt="Generic placeholder"
                                     />
                                     <div className="media-body">
-                                        <h4 className="mt-0 mb-2">
+                                        <h4 className="mt-0 mb-4">
                                             List-based media object
                                         </h4>
                                         <P>
@@ -54,19 +54,22 @@ const SiteFooter = (props) => {
                     </div>
                     <div className="col-sm-3">
                         <div className="inner-wrap">
-                           <h5 className="mt-0 mb-2">
+                            <h5 className="mt-0 mb-2">
                                 Footer Links
                             </h5>
                             <ul className="nav d-block">
                                 <li className="nav-item d-block">
-                                    <Link className="py-2 d-block" href="/">A Link</Link></li>
-                                    <li className="nav-item d-block">
-                                    <Link className="py-2 d-block" href="/">Even More Link Link</Link></li>
+                                    <Link className="py-2 d-block" href="/">A Link</Link>
+
+                                </li>
                                 <li className="nav-item d-block">
-                                    <Link className="py-2 d-block" href="/">Another Link</Link></li>
+                                    <Link className="py-2 d-block" href="/">Even More Link Link</Link>
+                                </li>
                                 <li className="nav-item d-block">
-                                    <Link className="py-2 d-block" href="/">Yet Another Link</Link></li>
-                                
+                                    <Link className="py-2 d-block" href="/">Another Link</Link>
+
+                                </li>
+
                                 <li className="nav-item d-block"><Link className="py-2 d-block" href="/">Is there Any End of This?</Link></li>
                             </ul>
                         </div>

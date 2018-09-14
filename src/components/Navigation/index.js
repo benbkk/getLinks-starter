@@ -20,8 +20,8 @@ class Navigation extends React.Component {
                 />
                 
                 <div className="collapse navbar-collapse" id="navbarCollapse">
-                <div class="container">
-                    <div class="row">
+                <div className="container">
+                    <div className="row">
                     <NavBarCollapsed
                         className="col-sm-6"
                         {...this.props}

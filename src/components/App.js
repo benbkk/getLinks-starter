@@ -10,7 +10,7 @@ export default () => {
     const Main = styled('main')`
         min-height: 100vh;
     `;
-    return(
+    return (
         <React.Fragment>
             <Header />
             <Main>
@@ -19,5 +19,5 @@ export default () => {
             </Main>
             <Footer />
         </React.Fragment>
-    )
+    );
 };

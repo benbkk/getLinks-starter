@@ -1,6 +1,7 @@
 import { injectGlobal } from 'emotion';
 import WebFont from 'webfontloader';
 import { rgba } from 'polished';
+import { palette } from 'css/variables';
 
 WebFont.load({
     google: {
@@ -20,6 +21,7 @@ injectGlobal`
     h1, h2, h3, h4, h5,
     .h1, .h2, .h3, .h4, .h5 {
         font-weight: 800;
+        color: ${palette.secondary};
     }
 
     button,

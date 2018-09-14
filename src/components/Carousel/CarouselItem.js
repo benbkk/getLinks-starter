@@ -1,21 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { size } from 'polished';
-import { mediaQueries } from 'css/variables';
+import { size, position } from 'polished';
+
+import { mediaQueries, palette } from 'css/variables';
 
 const CarouselItem = (props) => {
     const { photo } = props;
 
-    const Screen = styled('li')`
+    const Screen = styled('figure')`
+        ${size('100%')};
         background-color: ${photo.color};
-        background: url(${photo.urls.full}) center no-repeat;
+        background-image: url(${photo.urls.full});
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: cover;
-        min-height: calc(100vh - 200px);
+        transition: all 0.2s ease-in-out;
+
+        &:after {
+            ${position('absolute')}
+            right: 0;
+            bottom: 0;
+            content: ''; 
+            width: 100%;
+            height: 100%;
+            background: rgb(148,187,233);
+            background: linear-gradient(146deg, rgba(148,187,233,0) 0%, rgba(123,155,193,0) 45%, rgba(0,0,0,0.861782212885154) 100%);
+            z-index: 9;
+        }
     `;
 
     const CarouselCaption = styled('figcaption')`
         text-align: right;
+        
 
     `;
     const Avatar = styled('span')`
@@ -28,6 +45,7 @@ const CarouselItem = (props) => {
     const UserName = styled('h2')`
         vertical-align: middle;
         clear: right;
+        color: ${palette.white};
 
         small {
             font-size: 16px;
@@ -40,8 +58,8 @@ const CarouselItem = (props) => {
     return (
         <Screen
             className="carousel-item"
-        >
-            <CarouselCaption className="carousel-caption">
+        >   
+                <CarouselCaption className="carousel-caption">
                 {photo.user.profile_image
                     ? (
                         <Avatar className="user-avatar d-inline-block mr-2">
@@ -62,6 +80,7 @@ const CarouselItem = (props) => {
                 
                 </UserName>
             </CarouselCaption>
+            
         </Screen>
     );
 };
