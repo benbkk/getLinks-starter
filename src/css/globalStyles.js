@@ -1,9 +1,19 @@
 import { injectGlobal } from 'emotion';
-import { position } from 'polished';
+import WebFont from 'webfontloader';
+
+WebFont.load({
+google: {
+    families: ['Assistant|300|800']
+}
+});
 
 injectGlobal`
     * {
         box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Assistant', Helvetica, sans-serif;
     }
 
     button,
@@ -14,33 +24,8 @@ injectGlobal`
         }
     }
 
-    .block {
-        display: block;
-    }
-
-    .navbar-brand {
-        text-align: center;
+    #app {
         position: relative;
     }
-    
-    .logo-text {
-        ${position('absolute', 0)};
-        font-size: 28px;
-        color: white;
-        height: 45px;
-        margin: auto;
-        text-transform: lowercase;
-        display: block
-        z-index: 2;
-    }
 
-    .navbar-brand::before {
-        display:block;
-        width: 130px;
-        height: 130px;
-        margin: 18px auto;
-        content: '';
-        background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-        border-radius: 50%;
-    }
 `;

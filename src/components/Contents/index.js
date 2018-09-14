@@ -5,8 +5,7 @@ import styled from 'react-emotion';
 
 const Main = styled('section')`
     padding: 32px 0;
-`
-
+`;
 class ContentGrid extends Component {
     constructor(props) {
         super(props);
@@ -34,24 +33,21 @@ class ContentGrid extends Component {
 
     render() {
         const { contents } = this.state;
-        console.log(contents);
         return (
             <Main className="content">
                 <div className="container">
                     <div className="row">
-                    {contents.map((content, i) => (
-                        <ContentItem
-                            key={i}
-                            content={content}
-                        />
-                    ))}
+                        {contents.map((content, i) => (
+                            <ContentItem
+                                key={i}
+                                content={content}
+                            />
+                        ))}
                     </div>
-                    
                 </div>
             </Main>
-
-        )
+        );
     }
-};
+}
 
 export default ContentGrid;

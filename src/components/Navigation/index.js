@@ -2,26 +2,24 @@ import React from 'react';
 import bsn from 'bootstrap.native/dist/bootstrap-native-v4';
 import NavToggle from './NavToggle';
 import NavBarCollapsed from './NavBarCollapsed';
-import SearchForm from './SearchForm';
+import SearchForm from 'components/SearchForm';
 
 class Navigation extends React.Component {
     componentDidMount() {
-        bsn.Collapse('#navbarToggler', {});
+       bsn.Collapse('#navbarToggler', {});
     }
 
     render() {
         return (
             <nav className="navbar navbar-expand-md navbar-light">
-            <div className="container">
                 <NavToggle
                     id="navbarToggler"
                     className="navbar-toggler"
                     target="navbarCollapse"
                     label="Toggle Navigation"
                 />
-                
+                <div className="collapse navbar-collapse" id="navbarCollapse">
                     <NavBarCollapsed
-                        id="navbarCollapse"
                         {...this.props}
                     />
                     <SearchForm
