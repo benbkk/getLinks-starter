@@ -7,13 +7,13 @@ const SearchForm = (props) => {
     return (
         <form className="form-inline my-2 my-lg-0">
             <input
-                className="form-control mr-sm-2"
+                className="form-control bd-search mr-sm-2"
                 type="search"
                 placeholder={placeholder}
                 aria-label={label}
             />        
             <button
-                className="btn btn-outline-info my-2 my-sm-0"
+                className="btn btn-info my-2 my-sm-0"
                 type="submit"
             >
                 {label}

@@ -1,25 +1,35 @@
 import { css } from 'emotion';
 
 export const palette = {
-    black: '#333333',
-    blue: '#4262E8',
-    purple: '#7949FF',
-    lightBlue: '#55C2FF',
-    turquoise: '#42E8D9',
-    green: '#2DFF87',
-    white: '#ffffff',
+    blue: '#007bff',
+    indigo: '#6610f2',
+    purple: '#6f42c1',
+    pink: '#e83e8c',
+    red: '#dc3545',
+    orange: '#fd7e14',
+    yellow: '#ffc107',
+    green: '#28a745',
+    teal: '#20c997',
+    cyan: '#17a2b8',
+    white: '#fff',
+    gray: '#6c757d',
+    grayDark: '#343a40',
+    primary: '#007bff',
+    secondary: '#6c757d',
+    success: '#28a745',
+    info: '#17a2b8',
+    warning: '#ffc107',
+    danger: '#dc3545',
+    light: '#f8f9fa',
+    dark: '#343a40',
 };
 
-export const bgBlue = css`
-    background-color: ${palette.blue};
-`;
-
 export const mediaQueries = {
-    desktop: '@media only screen and (min-width:1920px)',
-    laptop: '@media screen and (min-width: 1025px)',
-    tablet: '@media only screen and (max-width:1024px)',
-    tabletS: '@media only screen and (max-width:768px)',
-    mobile: '@media screen and (max-width:640px)',
+    xl: '@media only screen and (min-width:1200px)',
+    lg: '@media screen and (min-width: 992px)',
+    md: '@media only screen and (max-width:768px)',
+    sm: '@media only screen and (max-width:576px)',
+    xs: '@media screen and (max-width:0px)',
 };
 
 export const left = css`

@@ -1,5 +1,6 @@
 import { injectGlobal } from 'emotion';
 import WebFont from 'webfontloader';
+import { rgba } from 'polished';
 
 WebFont.load({
     google: {
@@ -14,6 +15,11 @@ injectGlobal`
 
     body {
         font-family: 'Assistant', Helvetica, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5,
+    .h1, .h2, .h3, .h4, .h5 {
+        font-weight: 800;
     }
 
     button,
@@ -36,6 +42,12 @@ injectGlobal`
         position: absolute;
         top: 18px;
         right: 18px;
+    }
+
+    .form-control:focus {
+        outline-color: #17a2b8;
+        border-color: #17a2b8;
+        box-shadow: 0 0 0 0.2rem ${rgba('#17a2b8', 0.2)};
     }
 
     @media (max-width: 767px) {

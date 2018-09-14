@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { position, size } from 'polished';
+import { mediaQueries } from 'css/variables';
 
 const Logo = (props) => {
     const {
@@ -15,10 +16,17 @@ const Logo = (props) => {
         ${size(logoSize)};
         position: relative;
         font-size: 24px;
+        font-weight: bold;
         line-height: ${logoSize}px;
         background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
         border-radius: 50%;
         padding: 0;
+
+        ${mediaQueries.sm} {
+            ${size(logoSize * 0.7)};
+            line-height: ${logoSize * 0.7}px;
+            font-size: 18px;
+        }
     `;
 
     return (
