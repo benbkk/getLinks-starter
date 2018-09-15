@@ -9,7 +9,7 @@ const Logo = (props) => {
         link, title, logoSize, hideText, textLight,
     } = props;
     const hiddenText = hideText ? 'sr-only' : '';
-    const linkColor = textLight ? 'text-light' : 'text-dark';
+    const linkColor = textLight ? 'text-white' : 'text-dark';
 
     const LogoCss = styled('a')`
         z-index: 1;
@@ -21,6 +21,11 @@ const Logo = (props) => {
         background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
         border-radius: 50%;
         padding: 0;
+
+        &:hover {
+            color: white;
+            opacity: 0.9;
+        }
 
         ${mediaQueries.sm} {
             ${size(logoSize * 0.7)};

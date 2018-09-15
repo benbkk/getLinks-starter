@@ -20,9 +20,9 @@ export default (props) => {
     `;
 
     const H3 = styled('h3')`
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.2;
-        letter-spacing: -1px;
+        font-weight: 700;
         text-transform: capitalize;
     `;
 

@@ -1,11 +1,11 @@
 import { injectGlobal } from 'emotion';
 import WebFont from 'webfontloader';
-import { rgba } from 'polished';
+import { rgba, lighten } from 'polished';
 import { palette } from 'css/variables';
 
 WebFont.load({
     google: {
-        families: ['Assistant|300|800']
+        families: ['Assistant:300,700']
     }
 });
 
@@ -20,8 +20,12 @@ injectGlobal`
 
     h1, h2, h3, h4, h5,
     .h1, .h2, .h3, .h4, .h5 {
-        font-weight: 800;
+        font-weight: 700;
         color: ${palette.secondary};
+    }
+
+    p, li {
+        color: ${lighten(0.1, palette.secondary)};
     }
 
     button,

@@ -18,23 +18,20 @@ class Navigation extends React.Component {
                     target="navbarCollapse"
                     label="Toggle Navigation"
                 />
-                
                 <div className="collapse navbar-collapse" id="navbarCollapse">
-                <div className="container">
-                    <div className="row">
-                    <NavBarCollapsed
-                        className="col-sm-6"
-                        {...this.props}
-                    />
-                    <SearchForm
-                        placeholder="Search"
-                        label="Search"
-                        className="col-sm-6"
-                    /> 
+                    <div className="container">
+                        <div className="row">
+                            <NavBarCollapsed
+                                className="col-sm-6"
+                                {...this.props}
+                            />
+                            <SearchForm
+                                placeholder="Search"
+                                label="Search"
+                                className="col-sm-6"
+                            />
+                        </div>
                     </div>
-                 
-                </div>
-                   
                 </div>
             </nav>
         );
