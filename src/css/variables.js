@@ -27,9 +27,9 @@ export const palette = {
 export const mediaQueries = {
     xl: '@media only screen and (min-width:1200px)',
     lg: '@media screen and (min-width: 992px)',
-    md: '@media only screen and (max-width:768px)',
-    sm: '@media only screen and (max-width:576px)',
-    xs: '@media screen and (max-width:0px)',
+    md: '@media only screen and (min-width:768px)',
+    sm: '@media only screen and (min-width:576px)',
+    xs: '@media screen and (min-width:0px)',
 };
 
 export const left = css`

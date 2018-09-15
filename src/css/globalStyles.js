@@ -1,7 +1,7 @@
 import { injectGlobal } from 'emotion';
 import WebFont from 'webfontloader';
 import { rgba, lighten } from 'polished';
-import { palette } from 'css/variables';
+import { palette, mediaQueries } from 'css/variables';
 
 WebFont.load({
     google: {
@@ -54,6 +54,10 @@ injectGlobal`
         outline-color: #17a2b8;
         border-color: #17a2b8;
         box-shadow: 0 0 0 0.2rem ${rgba('#17a2b8', 0.2)};
+    }
+    
+    .navbar {
+        padding-top: 0;
     }
 
     @media (max-width: 767px) {

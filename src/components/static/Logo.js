@@ -1,42 +1,80 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { position, size } from 'polished';
+import { size } from 'polished';
 import { mediaQueries } from 'css/variables';
 
 const Logo = (props) => {
     const {
-        link, title, logoSize, hideText, textLight,
+        isSticky, link, title, logoSize, hideText, textLight,
     } = props;
     const hiddenText = hideText ? 'sr-only' : '';
     const linkColor = textLight ? 'text-white' : 'text-dark';
+    const stickyHeader = isSticky ? 'sticky' : '';
 
     const LogoCss = styled('a')`
         z-index: 1;
-        ${size(logoSize)};
+        
         position: relative;
-        font-size: 24px;
+        
+        margin-bottom: 0px;
         font-weight: bold;
-        line-height: ${logoSize}px;
+        
         background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
         border-radius: 50%;
         padding: 0;
+        transition: width 0.2s height 0.2s ease-in-out;
 
         &:hover {
             color: white;
             opacity: 0.9;
         }
+        
+        ${size(logoSize * 0.7)};
+        line-height: ${logoSize * 0.7}px;
+        font-size: 18px;
+    
 
         ${mediaQueries.sm} {
             ${size(logoSize * 0.7)};
             line-height: ${logoSize * 0.7}px;
             font-size: 18px;
+            margin-bottom: 0;
         }
+
+        ${mediaQueries.md} {
+            ${size(logoSize)};
+            line-height: ${logoSize}px;
+            font-size: 24px;
+            margin-bottom: 9px;
+
+            &.sticky {
+                ${size(logoSize * 0.7)};
+                line-height: ${logoSize * 0.7}px;
+                font-size: 18px;
+                margin-bottom: -18px;
+            }
+        }
+
+        ${mediaQueries.lg} {
+            ${size(logoSize)};
+            line-height: ${logoSize}px;
+            font-size: 24px;
+            margin-bottom: -18px;
+
+            &.sticky {
+                ${size(logoSize * 0.7)};
+                line-height: ${logoSize * 0.7}px;
+                font-size: 18px;
+                margin-bottom: -18px;
+            }
+        }
+
     `;
 
     return (
         <LogoCss
-            className={`navbar-brand d-block mx-auto text-center ${hiddenText} ${linkColor}`}
+            className={`navbar-brand d-block mx-auto text-center ${hiddenText} ${linkColor} ${stickyHeader}`}
             href={link}
         >
             {title}

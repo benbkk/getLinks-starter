@@ -75,8 +75,8 @@ const SiteFooter = (props) => {
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-12">
+                <div className="row">
+                    <div className="col-12">
                         <Copyright className="d-block py-4 text-secondary">
                             &copy; 2018
                         </Copyright>
