@@ -1,10 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+import { mediaQueries } from 'css/variables';
 
 const SearchForm = (props) => {
     const { placeholder, label } = props;
+
+    const Form = styled('form')`
+        margin-bottom: 18px;
+
+        ${mediaQueries.md} {
+            margin-bottom: 0;
+        }
+    `;
     return (
-        <form 
+        <Form 
             className="form-inline"
             {...props}
             >
@@ -20,7 +30,7 @@ const SearchForm = (props) => {
             >
                 {label}
             </button>
-        </form>
+        </Form>
     );
 };
 

@@ -13,8 +13,8 @@ const Logo = (props) => {
     const stickyHeader = isSticky ? 'sticky' : '';
 
     const LogoCss = styled('a')`
-        margin-bottom: 0px;
-        transform: translateY(10px);
+        margin: 10px 0;
+        transform: translateY(0);
         font-weight: bold;
         
         background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
@@ -36,7 +36,6 @@ const Logo = (props) => {
             ${size(logoSize * 0.7)};
             line-height: ${logoSize * 0.7}px;
             font-size: 18px;
-            margin-bottom: 0;
         }
 
         ${mediaQueries.md} {
@@ -44,6 +43,7 @@ const Logo = (props) => {
             line-height: ${logoSize}px;
             font-size: 24px;
             margin-bottom: 9px;
+            transform: translateY(10px);
 
             &.sticky {
                 ${size(logoSize * 0.7)};

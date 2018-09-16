@@ -58,6 +58,11 @@ injectGlobal`
     
     .navbar {
         padding-top: 0;
+        padding:0;
+
+        ${mediaQueries.md} {
+            padding: 0.5rem 1rem;
+        }
     }
     .navbar-nav {
         padding-left: 15px;

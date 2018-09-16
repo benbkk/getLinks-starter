@@ -18,8 +18,8 @@ class Header extends Component {
             isScrolling: false,
         }
         this.refCallback = React.createRef();
-        this.getScrollPosition = debounce(this.getScrollPosition, 66);
-        this.onScrollStop = debounce(this.onScrollStop, 300);
+        // this.getScrollPosition = debounce(this.getScrollPosition, 66);
+        this.onScrollStop = debounce(this.onScrollStop, 66);
     }
 
     componentDidMount () {
@@ -43,10 +43,10 @@ class Header extends Component {
         this.setState({
             stickyHeight
         });
-        this.getScrollPosition();
+        this.getScrollPosition(stickyHeight);
     }
 
-    getScrollPosition = () => {
+    getScrollPosition = (stickyHeight) => {
 
         const scrollY = window.scrollY;
         this.setState({
