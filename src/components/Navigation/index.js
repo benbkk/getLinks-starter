@@ -20,9 +20,9 @@ class Navigation extends React.Component {
                 />
                 <div className="collapse navbar-collapse" id="navbarCollapse">
                     <div className="container">
-                        <div className="row">
+                        <div className="row justify-content-between">
                             <NavBarCollapsed
-                                className="col-sm-6"
+                                className="col-sm-6 navbar-nav mr-auto"
                                 {...this.props}
                             />
                             <SearchForm
