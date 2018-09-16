@@ -15,7 +15,8 @@ const CarouselItem = (props) => {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        transition: all 0.2s ease-in-out;
+        transition: transform 0.2s linear;
+        backface-visibility: hidden;
 
         &:after {
             ${position('absolute')}
@@ -28,6 +29,7 @@ const CarouselItem = (props) => {
             background: linear-gradient(146deg, rgba(148,187,233,0) 0%, rgba(123,155,193,0) 45%, rgba(0,0,0,0.861782212885154) 100%);
             z-index: 9;
             opacity: 0.8;
+            backface-visibility: hidden;
         }
     `;
 

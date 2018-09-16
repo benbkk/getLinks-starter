@@ -3,9 +3,8 @@ import Navigation from 'components/Navigation';
 import Logo from 'static/Logo';
 import debounce from 'lodash.debounce';
 import styled, { css } from 'react-emotion';
-import { position, transparentize } from 'polished';
+import { transparentize } from 'polished';
 import { palette, mediaQueries } from 'css/variables';
-import Measure from 'react-measure';
 
 
 class Header extends Component {
@@ -19,20 +18,20 @@ class Header extends Component {
             isScrolling: false,
         }
         this.refCallback = React.createRef();
-        this.getScrollPosition = debounce(this.getScrollPosition, 120);
-        this.onScrollStop = debounce(this.onScrollStop, 120);
+        this.getScrollPosition = debounce(this.getScrollPosition, 66);
+        this.onScrollStop = debounce(this.onScrollStop, 200);
     }
 
     componentDidMount () {
         this.setHeaderHeight();
-        window.addEventListener('scroll', this.onScroll);
-        this.getScrollPosition();
-
+        document.addEventListener('scroll', this.onScroll);
+        // window.addEventListener('resize', this.setHeaderHeight);
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (prevState === this.state || prevState.scrollY === this.state.scrollY) return;
         // this.onScrollStop();
+        // this.setHeaderHeight();
         if (this.state.scrollY !== prevState.scrollY) {
             this.onScrollStop();
         }
@@ -44,7 +43,8 @@ class Header extends Component {
         this.setState({
             stickyHeight
         });
-        if (window.scroll >= stickyHeight) {
+        this.getScrollPosition();
+        if (document.scrollTop >= stickyHeight) {
             return this.setState({
                 isSticky: true,
             })
@@ -52,10 +52,12 @@ class Header extends Component {
     }
 
     getScrollPosition = () => {
+
         const scrollY = window.scrollY;
         this.setState({
             scrollY
-        })
+        });
+
     }
 
     onScroll = (e) => {
@@ -73,7 +75,7 @@ class Header extends Component {
         const stickyWrapper = this.refCallback.current;
         const stickyHeight = stickyWrapper.getBoundingClientRect().height;
 
-        if (this.state.stickyHeight !== stickyHeight) {
+        if (this.state.stickyHeight !== stickyHeight && !this.state.isSticky) {
             this.setState({
                 stickyHeight,
             })
@@ -100,7 +102,6 @@ class Header extends Component {
 
         const HeaderWrap = styled('header')`
             position: relative;
-            padding: 1rem 1rem 0;
             
             ${mediaQueries.md} {
                 min-height: ${stickyHeight}px;
@@ -114,28 +115,34 @@ class Header extends Component {
             width: 100%;
             z-index: 99;
             min-height: 0;
-
-            transform: translateY(-300px);
-            transition: all 0.2s ease-in-out;
-            padding: 1rem 1rem 0;
+            transition: opacity 0.1s, visibility 0.1s, transform 1s linear;
             
             background: ${transparentize(0.05, 'white')};
             box-shadow: 0 0 50px  ${transparentize(0.75, palette.secondary)};
             backface-visibility: hidden;
+            
+            &.hide {
+                transform: translateY(-300px);
+                opacity: 0;
+                visibility: hidden;
+            }
 
             &.show {
                 transform: translateY(0);
+                visibility: visible;
+                opacity: 1;
             }
+            
         `;
 
         
         const stickyCss = isSticky ? stickyHead : '';
-        const stickyHide = !isScrolling ? 'show' : '';
+        const stickyHide = !isScrolling ? 'show' : 'hide';
         const setHeight = css`
-            min-height: ${stickyHeight}px;
+            height: ${stickyHeight}px;
         `;
         return (
-            <HeaderWrap className={`flex-column flex-row bd-navbar ${setHeight}`} role="navigation">
+            <HeaderWrap className={`flex-column flex-row bd-navbar ${isSticky ? setHeight : ''}`} role="navigation">
                 <div ref={this.refCallback} className={`${stickyCss} ${stickyHide}`}>
                     <Logo
                         title="getLinks"

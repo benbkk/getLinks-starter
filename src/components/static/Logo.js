@@ -13,11 +13,8 @@ const Logo = (props) => {
     const stickyHeader = isSticky ? 'sticky' : '';
 
     const LogoCss = styled('a')`
-        z-index: 1;
-        
-        position: relative;
-        
         margin-bottom: 0px;
+        transform: translateY(10px);
         font-weight: bold;
         
         background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);

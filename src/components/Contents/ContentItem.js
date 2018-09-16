@@ -7,10 +7,10 @@ export default (props) => {
     const Article = styled('article')`
         margin-bottom: 36px;
         transform: scale(1) translateY(0px);
-        transition: transform 0.2s ease-in-out;
+        transition: transform 0.1s linear;
 
         &:hover {
-            transform: scale(1.1) translateY(-9px);
+            transform: scale(1.05) translateY(-9px);
         }
     `;
 

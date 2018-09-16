@@ -11,7 +11,7 @@ class Navigation extends React.Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-md mb-sm-4 mb-md-0 navbar-light">
+            <nav className="navbar navbar-expand-md navbar-light">
                 <NavToggle
                     id="navbarToggler"
                     className="navbar-toggler"
@@ -22,7 +22,7 @@ class Navigation extends React.Component {
                     <div className="container">
                         <div className="row justify-content-between">
                             <NavBarCollapsed
-                                className="navbar-nav col-auto mb-sm-2 mb-md-0"
+                                className="navbar-nav col-auto"
                                 {...this.props}
                             />
                             <SearchForm
