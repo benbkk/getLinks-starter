@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 const SearchForm = (props) => {
     const { placeholder, label } = props;
     return (
-        <form className="form-inline col-sm-5">
+        <form 
+            className="form-inline"
+            {...props}
+            >
             <input
                 className="form-control bd-search mr-sm-2"
                 type="search"

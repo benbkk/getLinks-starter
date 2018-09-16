@@ -59,10 +59,15 @@ injectGlobal`
     .navbar {
         padding-top: 0;
     }
+    .navbar-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     @media (max-width: 767px) {
         .form-inline {
             width: 100%;
+            align-items: left;
         }
 
         .form-inline .form-control {

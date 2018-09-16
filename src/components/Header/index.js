@@ -27,6 +27,7 @@ class Header extends Component {
         this.setHeaderHeight();
         window.addEventListener('scroll', this.onScroll);
         this.getScrollPosition();
+
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -43,6 +44,11 @@ class Header extends Component {
         this.setState({
             stickyHeight
         });
+        if (window.scroll >= stickyHeight) {
+            return this.setState({
+                isSticky: true,
+            })
+        }
     }
 
     getScrollPosition = () => {
@@ -108,7 +114,7 @@ class Header extends Component {
             width: 100%;
             z-index: 99;
             min-height: 0;
-            overflow: hidden;
+
             transform: translateY(-300px);
             transition: all 0.2s ease-in-out;
             padding: 1rem 1rem 0;
