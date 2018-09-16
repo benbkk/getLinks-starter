@@ -29,7 +29,7 @@ export const mediaQueries = {
     lg: '@media screen and (min-width: 992px)',
     md: '@media only screen and (min-width:768px)',
     sm: '@media only screen and (min-width:576px)',
-    xs: '@media screen and (min-width:0px)',
+    xs: '@media screen and (min-width:320px)',
 };
 
 export const left = css`
