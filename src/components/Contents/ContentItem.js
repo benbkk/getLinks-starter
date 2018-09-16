@@ -1,16 +1,21 @@
 import React from 'react';
 import styled from 'react-emotion';
+import { position, size } from 'polished';
 
 export default (props) => {
     const { content } = props;
 
     const Article = styled('article')`
         margin-bottom: 36px;
-        transform: scale(1) translateY(0px);
-        transition: transform 0.1s linear;
+        transform: scale(1);
+        -webkit-filter: grayscale(90%);
+        filter: grayscale(90%);
+        transition: filter 0.1s, tranform 0.1s ease;
 
         &:hover {
-            transform: scale(1.05) translateY(-9px);
+            transform: scale(1.1);
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
         }
     `;
 
@@ -34,32 +39,34 @@ export default (props) => {
     const InnerWrapper = styled('div')`
         background-color: white;
         box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+        backface-visibility: hidden;
         cursor: pointer;
         border-radius: 16px;
-        overflow: hidden;
+        position: relative;
+        
         &:after {
-            box-shadow: 0 6px 15px rgba(36,37,38,0.08);
+            ${position('absolute', 0)};
+            ${size('100%')};
+
+            border-radius: 16px;
+            content: '';
+            display: block;
             opacity: 0;
-            transition: opacity 0.25s ease, transform 0.25s ease;
-        } 
+            box-shadow: 0 0 20px rgba(36,37,38,0.1);
+            transition: opacity 0.1s ease;
+        }
+
         &:hover {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
             &:after {
                 opacity: 1;
             }
-               
         }
     `;
 
     const Img = styled('img')`
         border-radius: 16px 16px 0 0;
-        -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
-        filter: grayscale(90%);
-        transition: filter 0.2s ease-in-out;
-
-        &:hover {
-            -webkit-filter: grayscale(0%);
-            filter: grayscale(0%);
-        }
     `;
 
     const titleText = content.title
