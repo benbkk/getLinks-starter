@@ -42,14 +42,14 @@ const Logo = (props) => {
             ${size(logoSize)};
             line-height: ${logoSize}px;
             font-size: 24px;
-            margin-bottom: 9px;
             transform: translateY(10px);
+            margin: 0 0 -18px 0;
 
             &.sticky {
                 ${size(logoSize * 0.7)};
                 line-height: ${logoSize * 0.7}px;
                 font-size: 18px;
-                margin-bottom: -18px;
+                margin: 0 0 -18px 0;
             }
         }
 
