@@ -1,17 +1,16 @@
-# Project Starter Kit for getLinks Assesment Test
-A minimum starter to get on with react projects. With the seems-to-be-everyone's favorite Bootstrap 4 but no jQuery.
-Check Progress [here](http://benbkk-getlinks.surge.sh)
+# An Experiment of Bootstrap Implementation with React (That I hate the least)
+Definitely **not** a recommendation or an example how to implement Bootstrap in your react project. 
 
 ## Progress & todos
 - [x] The dreaded Bootstrap Navbar markups!
-- [ ] Carousel
-- [ ] Grid Example
+- [x] Carousel
+- [x] Grid Example
 
 ## Featuring
 - Webpack 4
-- ~~Glamorous / Glamor~~ ~~Emotion CSS~~ Bootstrap 4 Native. I know, sorry, folks. 
-- ~~PostCSS~~
-- **No JQuery**
+- Emotion JS 
+- Bootstrap 4 Native **No JQuery**
+- Bootstrap 4 CSS from CDN **unfortunately**
 
 ## Getting Started
 
